@@ -1,0 +1,22 @@
+{
+  "name": "@abhinaya2022/ngx-validation-message",
+  "version": "0.0.1",
+  "description": "A library for form validation in Angular",
+  "author": {
+    "name": "Rahul Kumar Yadav",
+    "email": "audreeabhinaya2022@gmail.com"
+  },
+  "license": "MIT",
+  "main": "bundles/validation-lib.umd.js",
+  "module": "fesm5/validation-lib.js",
+  "es2015": "fesm2015/validation-lib.js",
+  "typings": "validation-lib.d.ts",
+  "peerDependencies": {
+    "@angular/common": "^16.2.0",
+    "@angular/core": "^16.2.0"
+  },
+  "dependencies": {
+    "tslib": "^2.3.0"
+  },
+  "sideEffects": false
+}
