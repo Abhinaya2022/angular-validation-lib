@@ -9,7 +9,6 @@ import { ControlValueAccessor, FormControl, NgControl } from '@angular/forms';
 export class ValidationLibComponent implements ControlValueAccessor {
   @Input('type') type = 'text';
   @Input('label') label = '';
-  @Input('isSubmitted') formSubmitted = false;
 
   constructor(@Self() public controlDir: NgControl) {
     this.controlDir.valueAccessor = this;

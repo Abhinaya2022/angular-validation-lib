@@ -4,13 +4,7 @@
     [formControl]="control"
     [placeholder]="label"
     class="form-control"
-    [ngClass]="
-      control.touched || formSubmitted
-        ? control.invalid
-          ? 'is-invalid'
-          : 'is-valid'
-        : null
-    "
+    [class.is-invalid]="control.invalid && (control.touched || control.dirty)"
   />
   <div
     *ngIf="control.status === 'PENDING'"
@@ -19,9 +13,7 @@
   <label for="floatingInput">{{ label }}</label>
   <div
     class="invalid-feedback"
-    *ngIf="
-      formSubmitted || (control.touched && control.invalid && control.dirty)
-    "
+    *ngIf="control.touched && control.invalid && control.dirty"
   >
     <strong *ngIf="control?.errors?.['required']"
       >Please enter your {{ label }}</strong
