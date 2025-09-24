@@ -12,8 +12,8 @@
   "es2015": "fesm2015/validation-lib.js",
   "typings": "validation-lib.d.ts",
   "peerDependencies": {
-    "@angular/common": "^16.2.0",
-    "@angular/core": "^16.2.0"
+    "@angular/common": "^17.3.12",
+    "@angular/core": "^17.3.12"
   },
   "dependencies": {
     "tslib": "^2.3.0"
