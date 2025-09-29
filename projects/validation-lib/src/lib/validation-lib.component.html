@@ -13,10 +13,13 @@
   <label for="floatingInput">{{ label }}</label>
   <div
     class="invalid-feedback"
-    *ngIf="control.touched && control.invalid && control.dirty"
+    *ngIf="control.invalid && (control.touched || control.dirty)"
   >
     <strong *ngIf="control?.errors?.['required']"
       >Please enter your {{ label }}</strong
+    >
+    <strong *ngIf="control?.errors?.['notMatching']"
+      >{{ label }} not matched</strong
     >
     <strong *ngIf="control?.errors?.['email']">Invalid email address</strong>
     <strong *ngIf="control?.errors?.['pattern']"

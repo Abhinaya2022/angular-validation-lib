@@ -7,14 +7,15 @@ A library for form validation message in Angular.
 To install this library, run:
 
 ```bash
-npm install ngx-validation-message
+npm i ngx-form-validation-lib
 ```
+
 Usage Guide
 
 1. Import ValidationLibModule
 
 ```bash
-import { ValidationLibModule } from '@abhinaya2022/ngx-validation-message';
+import { ValidationLibModule } from 'ngx-form-validation-lib';
 @NgModule({
   imports: [ValidationLibModule],
   })
@@ -37,6 +38,13 @@ export class AppModule {}
 form: new FormGroup({
    email : new FormControl('',[Validators.required,Validators.email]),
 })
+
+onSubmit() {
+    if (this.form.invalid) {
+      this.form.markAllAsTouched();
+      return;
+    }
+}
 ```
 
 Helpers
